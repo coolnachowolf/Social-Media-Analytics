@@ -49,7 +49,12 @@ Parameters: str
 Returns: str
 '''
 def parsePosition(fromString):
-    return
+    name = ''
+    last = ''
+    string = fromString.split(" (")
+    last = string[1]
+    name = last.split(" ")
+    return name[0]
 
 
 '''
@@ -266,7 +271,7 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    test.testParseName()
+    test.testParsePosition()
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
