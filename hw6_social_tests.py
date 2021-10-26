@@ -4,10 +4,10 @@ from hw6_social import *
 
 def testMakeDataFrame():
     print("Testing makeDataFrame()...", end="")
-    df = makeDataFrame("data/politicaldata.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
     assert(type(df) == pd.core.frame.DataFrame)
     assert(df.size == 89640)
-    stateDf = makeDataFrame("data/statemappings.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     assert(type(stateDf) == pd.core.frame.DataFrame)
     assert(stateDf.size == 204)
     print("... done!")

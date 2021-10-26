@@ -1,7 +1,7 @@
 """
 Social Media Analytics Project
-Name: Aishwarya Srinath
-Roll Number:
+Name: 
+Roll Number: 
 """
 
 import hw6_social_tests as test
@@ -25,8 +25,8 @@ Parameters: str
 Returns: dataframe
 '''
 def makeDataFrame(filename):
-    return
-
+    return pd.read_csv(filename)
+    
 
 '''
 parseName(fromString)
@@ -262,6 +262,7 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
+    test.testMakeDataFrame()
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
