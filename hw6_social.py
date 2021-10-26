@@ -82,7 +82,13 @@ Parameters: str
 Returns: list of strs
 '''
 def findHashtags(message):
-    return
+    hash = []
+    string = message.split(" ")
+    for i in range(len(string)):
+        if string[i][0] == "#":
+            hash.append(string[i])
+    return hash
+
 
 
 '''
@@ -93,7 +99,6 @@ Returns: str
 '''
 def getRegionFromState(stateDf, state):
     return
-
 
 '''
 addColumns(data, stateDf)
@@ -279,7 +284,7 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    test.testParseState()
+    test.testGetRegionFromState()
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
