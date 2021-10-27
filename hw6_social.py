@@ -111,23 +111,23 @@ def addColumns(data, stateDf):
     regions = []
     hashtags = []
     for index, row in data.iterrows():
-        labelvalue=data["label"].loc[index]
-        name=parseName(labelvalue)
-        position=parsePosition(labelvalue)
-        state=parseState(labelvalue)
-        region=getRegionFromState(stateDf,state)
-        txtvalue=data["text"].loc[index]
-        hashtag=findHashtags(txtvalue)
+        label = data["label"].loc[index]
+        name = parseName(label)
+        position = parsePosition(label)
+        state = parseState(label)
+        region = getRegionFromState(stateDf,state)
+        txtvalue = data["text"].loc[index]
+        hashtag = findHashtags(txtvalue)
         names.append(name)
         positions.append(position)
         states.append(state)
         regions.append(region)
         hashtags.append(hashtag)
-    data["name"]=names
-    data["position"]=positions
-    data["state"]=states
-    data["region"]=regions
-    data["hashtags"]=hashtags
+    data["name"] = names
+    data["position"] = positions
+    data["state"] = states
+    data["region"] = regions
+    data["hashtags"] = hashtags
     return None
 
 
@@ -158,7 +158,12 @@ Returns: None
 '''
 def addSentimentColumn(data):
     classifier = SentimentIntensityAnalyzer()
-    return
+    sentiments = []
+    for index, row in data.iterrows():
+        sent = row["text"]
+        sentiments.append(findSentiment(classifier, sent))
+    data["sentiment"] = sentiments
+    return None
 
 
 '''
@@ -311,7 +316,7 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    test.testFindSentiment()
+    test.testAddSentimentColumn()
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
