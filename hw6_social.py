@@ -5,6 +5,7 @@ Roll Number:
 """
 
 import hw6_social_tests as test
+import re
 
 project = "Social" # don't edit this
 
@@ -82,11 +83,8 @@ Parameters: str
 Returns: list of strs
 '''
 def findHashtags(message):
-    hash = []
-    string = message.split(" ")
-    for i in range(len(string)):
-        if string[i][0] == "#":
-            hash.append(string[i])
+    regex = r"#\w+"
+    hash = re.findall(regex,message)
     return hash
 
 
@@ -284,7 +282,7 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    test.testGetRegionFromState()
+    test.testFindHashtags()
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
