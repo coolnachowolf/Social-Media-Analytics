@@ -52,7 +52,7 @@ def testFindHashtags():
 
 def testGetRegionFromState():
     print("Testing getRegionFromState()...", end="")
-    stateDf = makeDataFrame("data/statemappings.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     assert(str(getRegionFromState(stateDf, "California")) == "West")
     assert(str(getRegionFromState(stateDf, "Maine")) == "Northeast")
     assert(str(getRegionFromState(stateDf, "Nebraska")) == "Midwest")
@@ -61,8 +61,8 @@ def testGetRegionFromState():
 
 def testAddColumns():
     print("Testing addColumns()...", end="")
-    df = makeDataFrame("data/politicaldata.csv")
-    stateDf = makeDataFrame("data/statemappings.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     assert(df["name"][1] == "Mitch McConnell")
     assert(df["name"][4] == "Mark Udall")
@@ -91,8 +91,8 @@ def week1Tests():
     testAddColumns()
 
 def runWeek1():
-    df = makeDataFrame("data/politicaldata.csv")
-    stateDf = makeDataFrame("data/statemappings.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     print("Updated dataframe:")
     print(df)
@@ -110,7 +110,7 @@ def testFindSentiment():
 
 def testAddSentimentColumn():
     print("Testing addSentimentColumn()...", end="")
-    df = makeDataFrame("data/politicaldata.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
     addSentimentColumn(df)
     assert(df["sentiment"][0] == "neutral")
     assert(df["sentiment"][1] == "negative")
@@ -199,8 +199,8 @@ def week2Tests():
     testFindSentiment()
     testAddSentimentColumn()
 
-    df = makeDataFrame("data/politicaldata.csv")
-    stateDf = makeDataFrame("data/statemappings.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
 
@@ -212,8 +212,8 @@ def week2Tests():
     testGetHashtagSentiment(df)
 
 def runWeek2():
-    df = makeDataFrame("data/politicaldata.csv")
-    stateDf = makeDataFrame("data/statemappings.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
 
@@ -250,8 +250,8 @@ def runWeek2():
 # after you finish each function.
 def runWeek3():
     print("Prepare for a bunch of charts!")
-    df = makeDataFrame("data/politicaldata.csv")
-    stateDf = makeDataFrame("data/statemappings.csv")
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
 
