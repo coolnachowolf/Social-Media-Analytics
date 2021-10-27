@@ -5,7 +5,7 @@ Roll Number:
 """
 
 import hw6_social_tests as test
-
+import re
 project = "Social" # don't edit this
 
 ### PART 1 ###
@@ -82,7 +82,9 @@ Parameters: str
 Returns: list of strs
 '''
 def findHashtags(message):
-    return
+    regex = r"#\w+"
+    hash = re.findall(regex,message)
+    return hash
 
 
 '''
@@ -92,7 +94,8 @@ Parameters: dataframe ; str
 Returns: str
 '''
 def getRegionFromState(stateDf, state):
-    return
+    row = stateDf.loc[stateDf['state'] == state, 'region']
+    return (row.values[0])
 
 
 '''
@@ -279,7 +282,7 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    test.testParseState()
+    test.testGetRegionFromState()
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
