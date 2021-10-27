@@ -173,7 +173,19 @@ Parameters: dataframe ; str ; str
 Returns: dict mapping strs to ints
 '''
 def getDataCountByState(data, colName, dataToCount):
-    return
+    dictionary = {}
+    for index, row in data.iterrows():
+        if ((len(colName)==0 and len(dataToCount) == 0)) :
+            state = row['state']
+            if state  not in dictionary:
+                dictionary[state] = 0
+            dictionary[state] += 1
+        elif(row[colName] == dataToCount):
+            state = row['state']
+            if state  not in dictionary:
+                dictionary[state] = 0
+            dictionary[state] += 1
+    return dictionary
 
 
 '''
@@ -316,7 +328,11 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    test.testAddSentimentColumn()
+    df = makeDataFrame("Social-Media-Analytics\data\politicaldata.csv")
+    stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
+    addColumns(df, stateDf)
+    addSentimentColumn(df)
+    test.testGetDataCountByState(df)
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
