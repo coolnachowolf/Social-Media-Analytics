@@ -257,7 +257,18 @@ Parameters: dataframe ; str
 Returns: float
 '''
 def getHashtagSentiment(data, hashtag):
-    return
+    value = 0
+    list = []
+    for index, row in data.iterrows():
+        if hashtag in row['text']:
+            value += 1
+            if(row['sentiment'] == 'positive'):
+                list.append(1)
+            elif(row['sentiment'] == 'negative'):
+                list.append(-1)
+            elif(row['sentiment'] == 'neutral'):
+                list.append(0)
+    return sum(list)/value
 
 
 ### PART 3 ###
@@ -364,7 +375,7 @@ if __name__ == "__main__":
     stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
-    test.testMostCommonHashtags(df)
+    test.testGetHashtagSentiment(df)
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
