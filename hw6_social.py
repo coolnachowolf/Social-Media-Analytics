@@ -238,7 +238,16 @@ Parameters: dict mapping strs to ints ; int
 Returns: dict mapping strs to ints
 '''
 def mostCommonHashtags(hashtags, count):
-    return
+    dictionary = {}
+    while(len(dictionary)<count):
+        maximum = 0
+        for value in hashtags:
+            if value not in dictionary:
+                if(hashtags[value]>maximum):
+                    maximum = hashtags[value]
+                    high = value
+        dictionary[high] = maximum
+    return dictionary
 
 
 '''
@@ -355,7 +364,7 @@ if __name__ == "__main__":
     stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
-    test.testGetHashtagRates(df)
+    test.testMostCommonHashtags(df)
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
