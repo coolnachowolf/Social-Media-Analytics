@@ -82,8 +82,18 @@ Parameters: str
 Returns: list of strs
 '''
 def findHashtags(message):
-    regex = r"#\w+"
-    hash = re.findall(regex,message)
+    hash = []
+    no = message.count("#")
+    string = message.split('#')
+    for i in string[1:len(string)]:
+        name = ''
+        for j in i:
+            if j not in endChars:
+                name += j
+            else:
+                break
+        name = '#' + name
+        hash.append(name)
     return hash
 
 
@@ -212,7 +222,13 @@ Parameters: dataframe
 Returns: dict mapping strs to ints
 '''
 def getHashtagRates(data):
-    return
+    dictionary = {}
+    for index, row in data.iterrows():
+        for i in row['hashtags']:
+            if i not in dictionary:
+                dictionary[i] = 0
+            dictionary[i] += 1
+    return dictionary
 
 
 '''
@@ -339,7 +355,7 @@ if __name__ == "__main__":
     stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
-    test.testGetDataForRegion(df)
+    test.testGetHashtagRates(df)
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
