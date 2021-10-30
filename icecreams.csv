@@ -1,0 +1,74 @@
+Semester,#1 original,#2 original,#3 original,#1 cleaned,#2 cleaned,#3 cleaned,#1 category,#2 category,#3 category
+S21,Vanilla,Chocolate,Pista,vanilla,chocolate,pista,vanilla,chocolate,other
+S22,Vanilla,Chocolate,Strawberry,vanilla,chocolate,strawberry,vanilla,chocolate,strawberry
+S23,Chocolate,Candy pop,Pan,chocolate,candy pop,pan,chocolate,other,other
+S24,Vanilla,Chocolate,Strawberry,vanilla,chocolate,strawberry,vanilla,chocolate,strawberry
+S25,Vanilla,Chocolate,Strawberry,vanilla,chocolate,strawberry,vanilla,chocolate,strawberry
+S26,Vanilla,Chocolate,Dry Fruit.,vanilla,chocolate,dry fruit.,vanilla,chocolate,other
+S27,Choco chips,Chocolate,Vanilla,choco chips,chocolate,vanilla,chocolate,chocolate,vanilla
+S28,Butter-Scotch,Mango,Kesar,butter-scotch,mango,kesar,butter-scotch,fruit,other
+S29,Vanilla,Chocolate,Butter-Scotch,vanilla,chocolate,butter-scotch,vanilla,chocolate,butter-scotch
+S30,Dark Chocolate,Lychee,Strawberry,dark chocolate,lychee,strawberry,chocolate,fruit,strawberry
+S31,Vanilla,Chocolate,Chocolate with nuts,vanilla,chocolate,chocolate,vanilla,chocolate,chocolate
+S32,Butter-Scotch,Chocolate,Vanilla,butter-scotch,chocolate,vanilla,butter-scotch,chocolate,vanilla
+S33,Vanilla,Strawberry,Chocolate,vanilla,strawberry,chocolate,vanilla,strawberry,chocolate
+S34,Chocolate,Pista,Red Velvet,chocolate,pista,red velvet,chocolate,other,other
+S35,La-Ferrero,Nutella Brownie,Nuts overload,la-ferrero,nutella brownie,nuts overload,other,other,other
+S36,Butter-Scotch,Vanilla,Strawberry,butter-scotch,vanilla,strawberry,butter-scotch,vanilla,strawberry
+S37,Chocolate,Black Current,Vanilla,chocolate,black current,vanilla,chocolate,other,vanilla
+S38,Neapolitan,Chocolate chip,Deserts with Butter Pecon,neapolitan,chocolate chip,deserts with butter pecon,other,other,other
+S39,Vanilla,Chocolate,Strawberry,vanilla,chocolate,strawberry,vanilla,chocolate,strawberry
+S40,Butter-Scotch,Vanilla,Strawberry,butter-scotch,vanilla,strawberry,butter-scotch,vanilla,strawberry
+S41,Kesar Pista,Black Current,Dark Chocolate,kesar pista,black current,dark chocolate,other,other,chocolate
+S42,Chocolate,Mango,Black Current,chocolate,mango,black current,chocolate,fruit,other
+S43,Vanilla,Sithaphal,Kulfi,vanilla,sithaphal,kulfi,vanilla,fruit,other
+S44,Vanilla,Chocolate,Strawberry,vanilla,chocolate,strawberry,vanilla,chocolate,strawberry
+S45,Sithaphal,Pistachio,Butter-Scotch,sithaphal,pistachio,butter-scotch,fruit,other,butter-scotch
+S46,Chocolate,Strawberry,Vanilla,chocolate,strawberry,vanilla,chocolate,strawberry,vanilla
+S47,Chocolate,Sitaphal,Coconut,chocolate,sitaphal,coconut,chocolate,fruit,fruit
+S48,Raj Bhog,Mango,American nuts,raj bhog,mango,american nuts,other,fruit,other
+S49,Butter Pecan,Chocolate,Mango,butter pecan,chocolate,mango,other,chocolate,fruit
+S50,Roasted almonds,Butter-Scotch,Vanilla,roasted almonds,butter-scotch,vanilla,other,butter-scotch,vanilla
+S51,Butter-Scotch,Black Current,Chocolate,butter-scotch,black current,chocolate,butter-scotch,other,chocolate
+S52,Chocolate,Mango,Vanilla,chocolate,mango,vanilla,chocolate,fruit,vanilla
+S53,Custard Apple,Mango,Butter-Scotch,custard apple,mango,butter-scotch,fruit,fruit,butter-scotch
+S54,Butter-Scotch,Vanilla,Strawberry,butter-scotch,vanilla,strawberry,butter-scotch,vanilla,strawberry
+S55,Butter-Scotch,American Dry Fruit,Chicago chips & Oreo,butter-scotch,american dry fruit,chicago chips & oreo,other,fruit,chocolate
+S56,Vanilla,Strawberry,Black Current,vanilla,strawberry,black current,strawberry,other,other
+S57,Choco Almond,Tender Coconut,Choco chips,choco almond,tender coconut,choco chips,other,chocolate,chocolate
+S58,Strawberry,Butter-Scotch,Vanilla,strawberry,butter-scotch,vanilla,strawberry,vanilla,vanilla
+S59,Buttur scotch,Strawberry,Chocolate,buttur scotch,strawberry,chocolate,buttur scotch,chocolate,strawberry
+S60,Butter-Scotch,Black Current,Tutti Frutti,butter-scotch,black current,tutti frutti,butter-scotch,other,fruit
+S61,Butter-Scotch,Vanilla with fruit salad,Kulfi,butter-scotch,vanilla with fruit salad,kulfi,butter-scotch,vanilla,other
+S62,Belgium Chocolate,Chocolate,any chocolate/coffee flavour,belgium chocolate,chocolate,any chocolate/coffee flavour,chocolate,chocolate,chocolate
+S63,Butter-Scotch,Vanilla,Strawberry,butter-scotch,vanilla,strawberry,butter-scotch,vanilla,strawberry
+S64,Strawberry,Vanilla,Chocobar,strawberry,vanilla,chocobar,strawberry,vanilla,chocolate
+S65,Vanilla,Caramel nuts,Chocobar,vanilla,caramel nuts,chocobar,vanilla,other,chocolate
+S66,Black Current,Chocolate,Butter-Scotch,black current,chocolate,butter-scotch,other,chocolate,butter-scotch
+S67,Chocolate,Cookie 'n Cream,Butter-Scotch,chocolate,cookie 'n cream,butter-scotch,chocolate,other,butter-scotch
+S68,Blueberry,Butter-Scotch,Chocolate,blueberry,butter-scotch,chocolate,fruit,butter-scotch,chocolate
+S69,Black Current,Vanilla,Butter-Scotch,black current,vanilla,butter-scotch,other,vanilla,butter-scotch
+S70,Coffee,Butter-Scotch,Bitter Chocolate,coffee,butter-scotch,bitter chocolate,other,butter-scotch,chocolate
+S71,Chocolate,Chocolate,Chocolate,chocolate,chocolate,chocolate,chocolate,chocolate,chocolate
+S72,Strawberry,Vanilla,Chocolate,strawberry,vanilla,chocolate,strawberry,vanilla,chocolate
+S73,Chocolate,Sitaphal,Black Current,chocolate,sitaphal,black current,chocolate,fruit,other
+S74,Mango,Butter-Scotch,Vanilla,mango,butter-scotch,vanilla,fruit,butter-scotch,vanilla
+S75,Black Current,Butter-Scotch,Strawberry,black current,butter-scotch,strawberry,other,butter-scotch,strawberry
+S76,Caramel,Vanilla,Chocolate,caramel,vanilla,chocolate,other,vanilla,chocolate
+S21,Guava,Sitaphal,Chikoo,guava,sitaphal,chikoo,fruit,fruit,fruit
+S21,Grape,Black current,Vanilla,grape,black current,vanilla,fruit,other,vanilla
+S21,Banana,Chikoo,Sithaphal,banana,chikoo,sithaphal,fruit,fruit,fruit
+S21,Blackcurrent,Vanilla,Butter-scotch,blackcurrent,vanilla,butter-scotch,other,vanilla,butter-scotch
+S21,blackcurrant,butter-scotch,strawberry,blackcurrant,butter-scotch,strawberry,other,butter-scotch,strawberry
+S21,Caramel,Vanilla,Chocolate,caramel,vanilla,chocolate,other,vanilla,chocolate
+S21,Chocolate,Vanilla,Strawberry,chocolate,vanilla,strawberry,chocolate,vanilla,strawberry
+S21,Vanilla,Strawberry,Butter-scotch,vanilla,strawberry,butter-scotch,vanilla,strawberry,butter-scotch
+S21,Kulfi,Butter-scotch,Vanilla with chocolate,kulfi,butter-scotch,vanilla with chocolate,other,butter-scotch,vanilla
+S21,Tiramisu,Butter-scotch,Vanilla,tiramisu,butter-scotch,vanilla,other,butter-scotch,vanilla
+S21,Butter-scotch,Vanilla,Tutti-frutty,butter-scotch,vanilla,tutti-frutty,butter-scotch,vanilla,fruit
+S21,Butter-scotch,Vanilla,Pista,butter-scotch,vanilla,pista,butter-scotch,vanilla,other
+S21,Connoisseur,Ben and jerrys,Magnum,connoisseur,ben and jerrys,magnum,other,other,other
+S21,Lychee,Butter-scotch,Rose,lychee,butter-scotch,rose,fruit,butter-scotch,other
+S21,Chocolate,Chocolate,Chocolate,chocolate,chocolate,chocolate,chocolate,chocolate,chocolate
+S21,Butter-scotch,Vanilla,Strawberry,butter-scotch,vanilla,strawberry,butter-scotch,vanilla,strawberry
+S21,Raspberry sorbet,Mint Chocolate Chip,Butter-scotch,raspberry sorbet,mint chocolate chip,butter-scotch,other,chocolate,butter-scotch
