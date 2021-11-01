@@ -281,7 +281,13 @@ Returns: None
 '''
 def graphStateCounts(stateCounts, title):
     import matplotlib.pyplot as plt
-    return
+    x = stateCounts.keys()
+    y = stateCounts.values()
+    plt.bar(x,y)
+    plt.xticks(rotation = 'vertical')
+    plt.title(title)
+    plt.show()
+    return None
 
 
 '''
@@ -291,7 +297,27 @@ Parameters: dict mapping strs to ints ; dict mapping strs to ints ; int ; str
 Returns: None
 '''
 def graphTopNStates(stateCounts, stateFeatureCounts, n, title):
-    return
+    frequency = {}
+    for i in stateCounts:
+        for i in stateFeatureCounts:
+            freq = stateFeatureCounts[i]/stateCounts[i]
+            frequency[i] = freq
+    dictionary = {}
+    while(len(dictionary)<n):
+        maximum = 0
+        for value in frequency:
+            if value not in dictionary:
+                if(frequency[value]>maximum):
+                    maximum = frequency[value]
+                    high = value
+        dictionary[high] = maximum
+    x = dictionary.keys()
+    y = dictionary.values()
+    plt.plot(x,y)
+    plt.xticks(rotation = 'vertical')
+    plt.title(title)
+    plt.show()
+    return None
 
 
 '''
