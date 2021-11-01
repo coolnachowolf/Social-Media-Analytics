@@ -6,7 +6,7 @@ Roll Number:
 """
 
 import hw6_social_tests as test
-import re
+
 project = "Social" # don't edit this
 
 ### PART 1 ###
@@ -282,7 +282,13 @@ Returns: None
 '''
 def graphStateCounts(stateCounts, title):
     import matplotlib.pyplot as plt
-    return
+    x = stateCounts.keys()
+    y = stateCounts.values()
+    plt.plot(x,y)
+    plt.xticks(rotation = 'vertical')
+    plt.title(title)
+    plt.show()
+    return None
 
 
 '''
@@ -292,7 +298,27 @@ Parameters: dict mapping strs to ints ; dict mapping strs to ints ; int ; str
 Returns: None
 '''
 def graphTopNStates(stateCounts, stateFeatureCounts, n, title):
-    return
+    frequency = {}
+    for i in stateCounts:
+        for i in stateFeatureCounts:
+            freq = stateFeatureCounts[i]/stateCounts[i]
+            frequency[i] = freq
+    dictionary = {}
+    while(len(dictionary)<n):
+        maximum = 0
+        for value in frequency:
+            if value not in dictionary:
+                if(frequency[value]>maximum):
+                    maximum = frequency[value]
+                    high = value
+        dictionary[high] = maximum
+    x = dictionary.keys()
+    y = dictionary.values()
+    plt.plot(x,y)
+    plt.xticks(rotation = 'vertical')
+    plt.title(title)
+    plt.show()
+    return None
 
 
 '''
@@ -302,7 +328,26 @@ Parameters: dict mapping strs to (dicts mapping strs to ints) ; str
 Returns: None
 '''
 def graphRegionComparison(regionDicts, title):
-    return
+    features = []
+    regions = []
+    region_feature = []
+    for i in regionDicts:
+        for j in regionDicts[i]:
+            if i not in features:
+                features.append(j)
+    for i in regionDicts.keys():
+        regions.append(i)
+    for i in regionDicts:
+        list = []
+        for j in features:
+            count = 0
+            for k in regionDicts[i]:
+                if j==k:
+                    count += regionDicts[i][k]
+            list.append(count)
+        region_feature.append(list)
+    sideBySideBarPlots(features, regions, region_feature, title)
+    return None
 
 
 '''
@@ -312,7 +357,18 @@ Parameters: dataframe
 Returns: None
 '''
 def graphHashtagSentimentByFrequency(data):
-    return
+    hash = getHashtagRates(data)
+    hashtags = []
+    frequencies = []
+    sentiment_scores = []
+    dictionary = mostCommonHashtags(hash, 50)
+    for i in dictionary:
+        sentiment_score = getHashtagSentiment(data, i)
+        hashtags.append(i)
+        frequencies.append(dictionary[i])
+        sentiment_scores.append(sentiment_score)
+    scatterPlot(frequencies, sentiment_scores, hashtags, 'Hashtags by Frequency & Sentiments')
+    return None
 
 
 #### PART 3 PROVIDED CODE ####
@@ -376,7 +432,6 @@ if __name__ == "__main__":
     stateDf = makeDataFrame("Social-Media-Analytics\data\statemappings.csv")
     addColumns(df, stateDf)
     addSentimentColumn(df)
-    test.testGetHashtagSentiment(df)
     '''print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
     test.week1Tests()
     print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
@@ -389,5 +444,5 @@ if __name__ == "__main__":
     test.runWeek2()"""
 
     ## Uncomment these for Week 3 ##
-    """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
-    test.runWeek3()"""
+    print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
+    test.runWeek3()
