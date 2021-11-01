@@ -1,3 +1,4 @@
+
 """
 Social Media Analytics Project
 Name: 
@@ -283,7 +284,7 @@ def graphStateCounts(stateCounts, title):
     import matplotlib.pyplot as plt
     x = stateCounts.keys()
     y = stateCounts.values()
-    plt.plot(x,y)
+    plt.bar(x,y)
     plt.xticks(rotation = 'vertical')
     plt.title(title)
     plt.show()
@@ -396,3 +397,4 @@ if __name__ == "__main__":
     ## Uncomment these for Week 3 ##
     print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
     test.runWeek3()
+
